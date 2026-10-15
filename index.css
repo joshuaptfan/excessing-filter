@@ -1,0 +1,105 @@
+body {
+  font-family: sans-serif;
+  display: grid;
+  grid: 2.2rem 1fr / 5rem 1fr;
+  margin: 0;
+}
+
+header {
+  grid-area: 1 / 1 / 2 / 3;
+  margin: 0.5rem;
+}
+
+header > span {
+  margin-right: 2rem;
+}
+
+search {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 2.2rem);
+}
+
+main {
+  grid-area: 2 / 2 / 3 / 3;
+  margin: 0 2rem;
+}
+
+main > button {
+  margin: 0 1rem 1rem 0;
+}
+
+main > table {
+  display: inline-block;
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  vertical-align: top;
+}
+
+#equipment {
+  margin-right: 4em;
+}
+
+#equipment th:first-child {
+  width: 10em;
+}
+
+#other-IT > thead > tr:last-child > th:not(:last-child) {
+  width: 6em;
+}
+
+#other-IT > tbody > tr > td > select {
+  width: 4.5em;
+}
+
+#other-IT > tbody > tr > td > button {
+  width: 2em;
+}
+
+td > input[type="number"] {
+  width: 3em;
+}
+
+input,
+select {
+  border: 1px solid #666;
+}
+
+#drop-target {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0008
+}
+
+#drop-target::before {
+	position: fixed;
+	top: 2rem;
+	bottom: 2rem;
+	left: 2rem;
+	right: 2rem;
+	font-size: 2rem;
+  color: #FFF;
+	text-align: center;
+	line-height: calc(100vh - 6rem);
+	border: 1rem dashed #FFF8;
+  content: 'Drop spreadsheet file';
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  input,
+  select {
+    color: #FFF;
+    background-color: #222;
+  }
+}

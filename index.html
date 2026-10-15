@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Excessing Inventory Filter</title>
+  <meta name="description" content="Inventory filter for excessing project.">
+	<meta name="author" content="Joshua Fan">
+	<link rel="icon" sizes="48x48" type="image/icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="lib/xlsx.mini.min.js" defer></script>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <header>
+    <span>Upload or drop spreadsheet file</span>
+    <input type="file" accept=".xlsx" />
+  </header>
+  <search>
+    <select size="999"></select>
+  </search>
+  <main>
+	  <noscript>Please enable JavaScript to use this site.</noscript>
+    <h2>&nbsp;</h2>
+    <button id="save-btn">Save changes</button>
+    <button id="revert-btn">Revert changes</button>
+    <button id="copy-btn">Copy site counts to clipboard</button>
+    <br />
+    <table id="equipment">
+      <thead>
+        <tr>
+          <th>Device Type</th>
+          <th>Count</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <table id="other-IT">
+      <thead>
+        <tr>
+          <th colspan="3">Other IT Hardware</th>
+        </tr>
+        <tr>
+          <th>Add to Type</th>
+          <th>Serial No.</th>
+          <th>Count</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <div id="drop-target"></div>
+</body>
+</html>
